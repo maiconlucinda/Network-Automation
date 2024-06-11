@@ -55,13 +55,13 @@ print('#' * 50)
 
 # READING  TO TEXT FILES
 # Writing something to the file
-with open('texts.txt', 'w') as file:
+with open('archives/texts.txt', 'w') as file:
     file.write('Many example using many tools\n')
     file.write('Network is still very important\n')
     
 
 # Adding something to the file
-with open('texts.txt', 'a') as file:
+with open('archives/texts.txt', 'a') as file:
     file.write('You have to learn Network\n')
 print('#' * 80)
 
@@ -69,7 +69,7 @@ print('#' * 80)
 
 # READING AND WRITING IN A FILE
 # The fils must to exist in this case
-with open('texts.txt', 'r+') as f:
+with open('archives/texts.txt', 'r+') as f:
     f.write('OSPF and BGP are very important protocols')
 
 
@@ -80,7 +80,7 @@ with open('texts.txt', 'r+') as f:
 
 # READING THE FILE AND CREATING A LIST OF EACH LINE
 
-with open("devices.txt") as file:
+with open("archives/devices.txt") as file:
     content = file.read()
     content = content.splitlines()
 
@@ -90,3 +90,11 @@ with open("devices.txt") as file:
     
     for device in devices:
         print(f"Pinging {device[0]}, IP: {device[1]}")
+
+print('#' * 80)
+
+
+
+
+
+
