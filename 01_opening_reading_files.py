@@ -78,5 +78,15 @@ with open('texts.txt', 'r+') as f:
 
 
 
+# READING THE FILE AND CREATING A LIST OF EACH LINE
 
+with open("devices.txt") as file:
+    content = file.read()
+    content = content.splitlines()
 
+    devices = list()
+    for line in content[1:]:
+        devices.append(line.split(":"))
+    
+    for device in devices:
+        print(f"Pinging {device[0]}, IP: {device[1]}")
