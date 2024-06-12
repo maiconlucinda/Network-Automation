@@ -39,3 +39,31 @@ with open('archives/numbers_2.csv', 'w') as numbercsv:
     writer.writerow(['x', 'x**2, x**3, x**4'])
     for x in range(1, 101):
         writer.writerow([x, x**2, x**3, x**4])
+
+
+
+
+with open('archives/passwd.csv', 'r') as f:
+    reader = csv.reader(f, delimiter='/', lineterminator='\n')
+
+    for row in reader:
+        print(row)
+print('#' * 80)
+
+
+
+# We can also create a type of dialect, this is basically a way of explaning the code some characteristcs of our document
+csv.register_dialect('hashes', delimiter='#', quoting=csv.QUOTE_NONE, lineterminator='\n')
+
+with open('archives/items.csv', 'r') as file:
+    reader = csv.reader(file, dialect='hashes')
+
+    for row in reader:
+        print(row)
+
+
+with open('archives/items.csv', 'a') as file:
+    reader = csv.reader(file, delimiter='hashes')
+
+    whriter = csv.writer(file, dialect='hashes')
+    writer.writerow(('spon', 3, 1.5))
