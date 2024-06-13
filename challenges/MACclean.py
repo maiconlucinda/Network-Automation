@@ -42,3 +42,20 @@ for line in content_list:
 #write to a new file
 # with open('file_without_blanks.txt', 'w') as f:
 #     f.write(''.join(tmp_list))
+print('#' * 80)
+
+
+
+# 04
+def tail(file, numberOfLine):
+    with open(f"archives/{file}") as filetxt:
+        content = filetxt.readlines()
+        startfrom = len(content) - numberOfLine
+
+        last = (content[startfrom:])
+        my_str = ''.join(last)
+        return my_str
+    
+
+result = tail('sample.txt', 3)
+print(result)
