@@ -63,7 +63,25 @@ with open('archives/items.csv', 'r') as file:
 
 
 with open('archives/items.csv', 'a') as file:
-    reader = csv.reader(file, delimiter='hashes')
+    reader = csv.reader(file)
 
-    whriter = csv.writer(file, dialect='hashes')
+    writer = csv.writer(file, dialect='hashes')
     writer.writerow(('spon', 3, 1.5))
+print('#' * 80)
+
+
+
+
+
+
+
+# ASSINEMENT
+with open('archives/devices2.txt', 'r') as file:
+    content = file.read().splitlines()
+
+    devices = list()
+    for device in content:
+        devices.append(device.split(":"))
+
+    print(devices)
+    
