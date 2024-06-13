@@ -85,3 +85,4 @@ with open('archives/devices2.txt', 'r') as file:
 
     print(devices)
     
+
