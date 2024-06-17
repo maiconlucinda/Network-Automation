@@ -40,6 +40,6 @@ print(output)
 
 
 
-if print(ssh_client.get_transport().is_active()) == True:
+if ssh_client.get_transport().is_active() == True:
     print('Close Connection')
     ssh_client.close()
