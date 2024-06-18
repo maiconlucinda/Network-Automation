@@ -8,7 +8,7 @@ ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 password = getpass.getpass('Enter password: ')
-linux = {'hostname':'192.168.88.241', 'port':'22', 'username':'guguadmin', 'password': password}
+linux = {'hostname':'192.168.88.235', 'port':'22', 'username':'########', 'password': password}
 
 
 

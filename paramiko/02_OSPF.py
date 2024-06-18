@@ -24,7 +24,7 @@ for router in routers:
 
 
     shell.send('enable\n')
-    shell.send('12345\n')
+    shell.send('########\n')
     shell.send('conf t\n')
     shell.send('router ospf 1\n')
     shell.send('net 0.0.0.0 0.0.0.0 area 0\n')
