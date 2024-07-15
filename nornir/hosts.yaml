@@ -1,0 +1,36 @@
+---
+
+
+R1:
+    hostname: "192.168.88.201"
+    groups:
+        - bahia_group
+        - itabata_group
+
+
+
+R2:
+    hostname: "192.168.88.202"
+    groups:
+        - es_group
+        - pedrocanario_group
+    data:
+        ntp_server: "1.2.3.4"
+
+
+
+R3:
+    hostname: "192.168.88.203"
+    groups:
+        - bahia_group
+        - postodamata_group
+
+
+
+R4:
+    hostname: "192.168.88.204"
+    groups:
+        - es_group
+        - serra_group
+
+

@@ -1,0 +1,4 @@
+ntp server 88.99.55.12
+snmp-server community gigasat ro
+interface eth 0/0
+description MIKROTIK - MGMT INTERFACE

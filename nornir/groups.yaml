@@ -1,0 +1,34 @@
+---
+
+bahia_group:
+    data:
+        ntp_server: "10.48.79.52"
+
+itabata_group:
+    username: "itabata"
+    password: "itabatapass"
+    data: 
+        ntp_server: "10.45.45.45"
+
+postodamata_group:
+    username: "postodamata"
+    password: "postodamatapass"
+
+
+
+es_group:
+    data:
+        ntp_server: "10.48.79.52"
+
+pedrocanario_group:
+    username: "pedrocanario"
+    password: "pedrocanariopass"
+
+serra_group:
+    username: "serra"
+    password: "serrapass"
+    data:
+        ntp_server: "10.45.78.65"
+
+
+mg_group: {}

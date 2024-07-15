@@ -1,0 +1,1620 @@
+2024-07-14 10:12:01,092 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 10:12:16,547 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:12:16,548 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:12:16,549 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:12:16,549 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:12:16,550 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:12:16,550 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:12:16,551 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:12:16,551 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:13:22,422 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 10:13:38,120 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:13:38,121 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:13:38,124 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:13:38,125 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:13:38,125 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:13:38,126 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:14:20,714 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 10:14:36,129 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:14:36,130 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:14:36,130 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 10:14:36,131 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:14:36,132 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:14:36,132 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 10:16:45,295 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 10:18:09,106 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 10:18:47,016 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 11:04:30,949 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 11:04:46,425 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 11:04:46,425 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 11:04:46,426 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 11:04:46,426 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 11:04:46,431 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 11:04:46,432 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 11:04:46,432 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 11:04:46,433 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 11:05:30,205 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 12:30:09,062 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 12:30:14,147 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 308, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2024-07-14 12:30:14,148 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:30:14,269 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 308, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2024-07-14 12:30:14,271 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:30:14,272 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 308, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2024-07-14 12:30:14,272 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:30:14,273 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 308, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2024-07-14 12:30:14,274 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:31:38,073 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 12:31:42,852 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 308, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2024-07-14 12:31:42,852 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:31:42,865 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/scrapli/channel/sync_channel.py", line 308, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2024-07-14 12:31:42,865 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:32:15,669 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 12:45:20,523 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 12:47:27,817 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 12:47:27,823 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 88, in open
+    raise NornirScrapliInvalidPlatform(
+nornir_scrapli.exceptions.NornirScrapliInvalidPlatform: 'platform' not provided in inventory for host `192.168.88.203`
+
+2024-07-14 12:47:27,824 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 88, in open
+    raise NornirScrapliInvalidPlatform(
+nornir_scrapli.exceptions.NornirScrapliInvalidPlatform: 'platform' not provided in inventory for host `192.168.88.201`
+
+2024-07-14 12:47:27,824 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 88, in open
+    raise NornirScrapliInvalidPlatform(
+nornir_scrapli.exceptions.NornirScrapliInvalidPlatform: 'platform' not provided in inventory for host `192.168.88.204`
+
+2024-07-14 12:47:27,824 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/tasks/core/send_config.py", line 58, in send_config
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir_scrapli/connection.py", line 88, in open
+    raise NornirScrapliInvalidPlatform(
+nornir_scrapli.exceptions.NornirScrapliInvalidPlatform: 'platform' not provided in inventory for host `192.168.88.202`
+
+2024-07-14 12:47:27,825 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:47:27,826 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:47:27,827 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:47:27,827 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook2.py", line 20, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_config (failed)
+
+
+2024-07-14 12:47:51,359 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2024-07-14 14:33:48,094 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 14:33:48,097 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:33:48,097 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:33:48,098 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:33:48,098 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:33:48,099 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:33:48,099 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:33:48,099 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:33:48,100 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:41:05,663 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 14:41:05,666 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:41:05,667 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:41:05,667 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:41:05,668 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:41:05,668 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'nornir_scrapli.tasks.core.send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+
+2024-07-14 14:41:05,668 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:41:05,669 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:41:05,669 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/runbook3.py", line 10, in show_command_test
+    task.run(task=send_command, command="show ip interface brief")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_command (failed)
+
+
+2024-07-14 14:44:11,101 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 14:58:00,495 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:02:19,891 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:02:19,897 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2024-07-14 15:02:19,897 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2024-07-14 15:02:19,897 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2024-07-14 15:02:19,899 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2024-07-14 15:02:19,901 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/05_sendcommands.py", line 12, in show_command_test
+    task.run(task=send_commands, command=command_list)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2024-07-14 15:02:19,904 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/05_sendcommands.py", line 12, in show_command_test
+    task.run(task=send_commands, command=command_list)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2024-07-14 15:02:19,905 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/05_sendcommands.py", line 12, in show_command_test
+    task.run(task=send_commands, command=command_list)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2024-07-14 15:02:19,906 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/05_sendcommands.py", line 12, in show_command_test
+    task.run(task=send_commands, command=command_list)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2024-07-14 15:02:37,561 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:03:56,199 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:07:56,566 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:07:56,568 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_commands_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands_from_file() got an unexpected keyword argument 'commands'
+
+2024-07-14 15:07:56,568 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_commands_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands_from_file() got an unexpected keyword argument 'commands'
+
+2024-07-14 15:07:56,569 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_commands_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands_from_file() got an unexpected keyword argument 'commands'
+
+2024-07-14 15:07:56,569 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_commands_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands_from_file() got an unexpected keyword argument 'commands'
+
+2024-07-14 15:07:56,569 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/06_sendcommands_file.py", line 10, in show_command_test
+    task.run(task=send_commands_from_file, commands="resources/commands.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2024-07-14 15:07:56,569 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/06_sendcommands_file.py", line 10, in show_command_test
+    task.run(task=send_commands_from_file, commands="resources/commands.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2024-07-14 15:07:56,570 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/06_sendcommands_file.py", line 10, in show_command_test
+    task.run(task=send_commands_from_file, commands="resources/commands.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2024-07-14 15:07:56,570 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/06_sendcommands_file.py", line 10, in show_command_test
+    task.run(task=send_commands_from_file, commands="resources/commands.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2024-07-14 15:08:12,294 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:09:12,327 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:10:46,171 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2024-07-14 15:44:12,975 -  nornir.core -     INFO -        run() - Running task 'send_config_test' with args {} on 4 hosts
+2024-07-14 15:49:57,284 -  nornir.core -     INFO -        run() - Running task 'send_config_test' with args {} on 4 hosts
+2024-07-14 15:49:57,287 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_configs() got an unexpected keyword argument 'config'
+
+2024-07-14 15:49:57,287 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_configs() got an unexpected keyword argument 'config'
+
+2024-07-14 15:49:57,288 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_configs() got an unexpected keyword argument 'config'
+
+2024-07-14 15:49:57,288 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_configs() got an unexpected keyword argument 'config'
+
+2024-07-14 15:49:57,288 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_config_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/08_sendconfigs.py", line 10, in send_config_test
+    task.run(task=send_configs, config=["ntp server 22.33.44.55", "username test privilege 15 secret 12345"])
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs (failed)
+
+
+2024-07-14 15:49:57,289 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_config_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/08_sendconfigs.py", line 10, in send_config_test
+    task.run(task=send_configs, config=["ntp server 22.33.44.55", "username test privilege 15 secret 12345"])
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs (failed)
+
+
+2024-07-14 15:49:57,289 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_config_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/08_sendconfigs.py", line 10, in send_config_test
+    task.run(task=send_configs, config=["ntp server 22.33.44.55", "username test privilege 15 secret 12345"])
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs (failed)
+
+
+2024-07-14 15:49:57,290 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_config_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/08_sendconfigs.py", line 10, in send_config_test
+    task.run(task=send_configs, config=["ntp server 22.33.44.55", "username test privilege 15 secret 12345"])
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs (failed)
+
+
+2024-07-14 15:50:04,251 -  nornir.core -     INFO -        run() - Running task 'send_config_test' with args {} on 4 hosts
+2024-07-14 15:55:11,233 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 15:55:26,848 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir_scrapli/tasks/core/send_configs.py", line 58, in send_configs
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/anaconda3/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/anaconda3/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/maiconlucinda/anaconda3/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/scrapli/channel/sync_channel.py", line 296, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/scrapli/channel/base_channel.py", line 476, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2024-07-14 15:55:26,849 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/08_sendconfigs.py", line 10, in send_configs_test
+    task.run(task=send_configs, configs=["router ospf 1", "network 0.0.0.0 255.255.255.255 area 1"])
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs (failed)
+
+
+2024-07-14 15:55:44,593 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 16:00:57,297 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 16:00:59,890 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:00:59,891 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:00:59,892 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:01:00,157 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:01:35,616 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 16:01:37,867 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:01:37,869 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:01:37,899 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:01:37,957 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/09_sendconfigs_file.py", line 10, in send_configs_test
+    task.run(task=send_configs_from_file, file="resources/configs.txt")
+  File "/Users/maiconlucinda/Documents/Python Code/Network Automation Python/nornir/.venv/lib/python3.11/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2024-07-14 16:03:20,226 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 16:05:49,242 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 16:11:01,009 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2024-07-14 16:11:28,429 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts

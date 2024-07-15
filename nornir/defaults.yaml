@@ -1,0 +1,5 @@
+---
+
+platform: "ios"
+data:
+    ntp_server: "10.68.79.53"
